@@ -1,0 +1,53 @@
+.feedBack-card
+    width: 85%
+    background: rgba($color-white, 0.75)
+    margin: 0 auto
+    box-shadow: $box-shadow
+    padding: 6rem
+    transform: skewX(330deg)
+    @include respond(tab-port)
+        transform: skewX(350deg)
+        padding: 3rem
+
+    & > *
+        transform: skewX(-330deg)
+        @include respond(tab-port)
+            transform: skewX(-350deg)
+            text-align: center
+
+
+.feedBack-card
+    &__img
+        width: 15rem
+        height: 15rem
+        float: left
+        border-radius: 100rem
+        shape-outside: circle(50% at 50% 50%)
+        -webkit-shape-outside: circle(50% at 50% 50%)
+        margin-right: 4rem 
+        overflow: hidden
+        position: relative
+        @include respond(tab-port)
+            float: none
+            margin: 0 auto
+            margin-bottom: 3rem
+        img
+            height: 100%
+            transform: scale(1.2)
+            transition: all .4s
+    &__name
+        text-align: center
+        font-size: 2rem
+        color: $color-white
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -20%)
+        opacity: 0
+        transition: all .4s
+    &:hover &__name
+        transform: translate(-50%, -50%)
+        opacity: 1
+    &:hover img
+        transform: scale(1)
+        filter: blur(.3rem) brightness(70%)

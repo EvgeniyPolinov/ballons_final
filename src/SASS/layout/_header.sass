@@ -1,0 +1,20 @@
+.header
+    height: 95vh
+    background: linear-gradient(90deg, rgba($color-brown-light, 0.7) 0.03%, rgba($color-black, 0.7) 99.94%), url(pexels-mehmet-turgut-kirkgoz-5865634.jpg), url(../img/header_background.jpg) center / cover no-repeat
+    clip-path: polygon(0 0,100% 0, 100% 100%, 0 80%)
+    position: relative
+    &__box
+        position: absolute
+        top: 40%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 100%
+        text-align: center
+        @include respond(tab-land)
+            top: 50%
+    &__logo
+        height: 7rem
+        width: 5rem
+        position: absolute
+        top: 5rem
+        left: 5rem
